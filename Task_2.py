@@ -1,17 +1,36 @@
 #import libraries here
 
 def main():
- month=input("Enter name of the month [ex. June]: ")
- day=int(input("Enter the day [ex. 5]: "))
- if (month == "December" and day >= 21) or (month == "January") or (month == "February") or (month == "March" and day < 20):
-    print(f"{month} {day} is in Winter")
- elif (month == "March" and day >= 20) or (month == "April") or (month == "May") or (month == "June" and day < 21):
-    print(f"{month} {day} is in Spring")
- elif (month == "June" and day >= 21) or (month == "July") or (month == "August") or (month == "September" and day < 22):
-    print(f"{month} {day} is in Summer")
- elif (month == "September" and day >= 22) or (month == "October") or (month == "November") or (month == "December" and day < 21):
-    print(f"{month} {day} is in Fall")
+  m=input("Enter name of the month [ex. June]: ")
+  d=int(input("Enter the day [ex. 5]: "))
+  if m=="March" or m=="April" or m=="May" or m=="June":
+      if (m=="March" and d<20) or (m=="June" and d>=21):
+          pass
+      else:
+          print(m,d,"is in Spring")
+  else:
+      pass
+  if m=="June" or m=="July" or m=="August" or m=="September":
+      if (m=="June" and d<21)or(m=="September" and d>=22):
+          pass
+      else:
+          print(m,d,"is in Summer")
+  else:
+      pass
+  if m=="October" or m=="November" or m=="December" or m=="September":
+      if (m=="September" and d<22) or(m=="December" and d>=21):
+          pass
+      else:
+          print(m,d,"is in Fall")
+  else:
+      pass
+  if m=="January" or m=="February" or m=="December" or m=="March":
+      if (m=="December" and d<21) or(m=="March" and d>=20):
+          pass
+      else:
+          print(m,d,"is in Winter")
   pass
 
 if __name__ == "__main__":
   main()
+ 
